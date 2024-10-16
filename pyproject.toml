@@ -1,0 +1,10 @@
+[project]
+name = "sites-africa"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.0.3",
+    "setuptools>=75.1.0",
+]
