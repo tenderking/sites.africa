@@ -2,47 +2,88 @@
 
 *,
 *::before *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
-    --clr-text: #444;
-    --clr-bg: white;
-    --clr-superlight: #f8f8f8;
-    --clr-light: #c4c4c4;
+  --clr-text: #444;
+  --clr-bg: white;
+  --clr-superlight: #f8f8f8;
+  --clr-light: #c4c4c4;
 }
 
-body{
-    background-color: var(--clr-bg);
-
-    font-family: 'Roboto', sans-serif;
-    color: var(--clr-text);
+body {
+  background-color: var(--clr-bg);
+  font-family: 'Roboto', sans-serif;
+  color: var(--clr-text);
 }
 
-nav{
-    height: 50px;
-    overflow: auto;
-    margin: auto;
-    width: auto;
-    text-align: left;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+nav {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 }
-span{
-    font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-left:30px;
+
+span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
 }
-.category-nav-bar{
-    display: flex;
-    flex-direction: column;
+
+.category-nav-bar {
+  padding-top: 60px; 
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-.category-container{
-    display: flex;
+
+.category-nav-items {
+  margin-bottom: 10px; 
 }
-h3{
-    padding: auto;
-    margin: auto;
-    text-align: center;
-    color: var(--clr-text);
+
+.category-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px; 
 }
+.card-wrapper {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;  
+  margin: 10px;        
+}
+
+h3 {
+  text-align: center;
+  color: var(--clr-text);
+}
+
+.site-cards {
+  border: 1px solid var(--clr-light);
+  padding: 20px; /* Increased padding */
+  margin: 10px;
+  border-radius: 5px;
+  min-width: 200px; /* Increased width */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow */
+  background-color: var(--clr-superlight); /* Added background color */
+}
+
+#main-title {
+  margin-top: 20px;
+}
+
+.category-section {
+  margin-top: 20px; 
+}
+

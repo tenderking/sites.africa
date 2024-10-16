@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,61 +8,43 @@
   <link rel="stylesheet" href="../static/style.css">
 
 </head>
-
 <body>
-    <header>
+  <header>
+    <nav>
+      <span>sites.africa</span>           
+    </nav>
+    <div class="category-nav-bar">
+      {% for category in categories %} 
+      <div class="category-nav-items"><h3 class="category-title">{{ category }}</h3> </div>
+      {% endfor %}
+    </div>
+    <h1 id="main-title">
+      Discover, diversity
+    </h1>
+    <h2 id="main-subtitle">
+      Explorwee what Africa has to offer
+    </h2>
+  </header>
 
-        <nav>
-            <span>sites.africa</span>           
-        </nav>
-        <div class="category-nav-bar">
-            <div class="category-nav-items"><h3 class="category-title">catergory 1</h3> </div>
-            <div class="category-nav-items"><h3 class="category-title">catergory 2</h3> </div>
-            <div class="category-nav-items"><h3 class="category-title">catergory 3</h3> </div>
-            <div class="category-nav-items"><h3 class="category-title">catergory 3</h3> </div>
-        </div>
-        <h1 id="main-title">
-            Discover, diversity
-        </h1>
-        <h2 id="main-subtitle">
-            Explorwee what Africa has to offer
-        </h2>
+  {% for category in categories %}
+  <section class="category-section">
+    <h3 class="category-title">{{ category }}</h3>
+    <div class="category-container">
+      {% for site in sites %}
+      {% if site.category == category %}
+      <div class="card-wrapper">
+        <h3 class="card-title">{{ site.name }}</h3>
+        <a href="{{ site.url }}" class="site-cards">
+          Visit Site 
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
 
-    </header>
-    <section class="category-section">
-        <h3 class="category-title">
-            Category
-        </h3>
-        <div class="category-container">
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-        </div>
-    </section>
-    <section class="category-section">
-        <h3 class="category-title">
-            Category
-        </h3>
-        <div class="category-container">
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-            <div class="site-cards">card</div>
-            <h3 class="card-title">site name</h3>
-        </div>
-    </section>
-
-    <footer>
-
-    </footer>
+  <footer>
+  </footer>
 </body>
-
 </html>
