@@ -1,8 +1,6 @@
 # sites.africa  website using flask
 
-- 🔭 I’m currently working on ...Upgrading my personal website
--  The css is not updating so I can't make the changes I want to. 
--  Might have to use codepen but that's not a great long term solution
+
 # Running flask app
 
 
